@@ -1,21 +1,21 @@
 import java.util.ArrayList;
 import java.util.Date;
 
-public class Zeitansager {
+public class Zeitansager { // Observable
     private String datumString;
     private ArrayList<Zuhoerer> abbonenten;
 
     public Zeitansager() {
-        abbonenten = new ArrayList<>();
+        abbonenten = new ArrayList<>(); 
     }
 
     public void schreibeEin(Zuhoerer zuhoerer) {
         if (zuhoerer != null) {
             // subscribe to the event
-            abbonenten.add(zuhoerer);
+            abbonenten.add(zuhoerer); 
 
-            abbonenten.add(zuhoerer);
-            zuhoerer.setAnsager(this);
+            abbonenten.add(zuhoerer); 
+            zuhoerer.setAnsager(this);  // set the event source
         }
     }
 
